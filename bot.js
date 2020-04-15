@@ -2,20 +2,37 @@ const Discord = require('discord.js');
 const auth = require('./auth.json');
 const client = new Discord.Client();
 
+var botID;
+
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setPresence({
+        game: {
+            name: 'your Soul!',
+            type: 'WATCHING'
+        },
+        status: 'online'
+    });
+    console.log(`Logged in as ${client.user.tag}!`);
+    
+    //Collect Bot ID
+    botID = client.user.id;
+    //console.log(botID);
 });
 
-client.on('message', async msg => {
-  if (msg.content === 'ping') {
-    msg.reply('pong');
-  }
-  else if (msg.content === 'Ping') {
-    msg.reply('Pong');
-  }
-  else if (msg.content === '@699829462614671390') {
-      msg.reply("Hi, I'm Soul Catcher, the Discord bot developed for Team Damaged Souls! Check out my source code here: https://github.com/TeamDamagedSouls/TDS-Discord-Bot. Contact @AX#1999 if you'd like to help make me better!")
-  }
+client.on('message', msg => {
+    if (msg.content === 'ping') {
+        msg.reply('pong');
+    }
+    else if (msg.content === 'Ping') {
+        msg.reply('Pong');
+        console.log(`<@${botID}>`);
+    }
+    else if (msg.mentions.users) {
+        let firstMention = msg.mentions.users.first();
+        if (firstMention === client.user) {
+            msg.reply(`Hi ${msg.author.username} I'm Soul Catcher, the Discord Bot developed for Team Damaged Souls!\nCheck out my source code here: https://github.com/TeamDamagedSouls/TDS-Discord-Bot.\nFeel free to contact <@166055639322329088> if you'd like to help make me better!`)
+        }
+    }   
 });
 
 client.login(auth.token);
