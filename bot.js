@@ -13,7 +13,7 @@ client.on('message', async msg => {
   else if (msg.content === 'Ping') {
     msg.reply('Pong');
   }
-  else if (msg.content === '@Soul Catcher') {
+  else if (msg.content === '@699829462614671390') {
       msg.reply("Hi, I'm Soul Catcher, the Discord bot developed for Team Damaged Souls! Check out my source code here: https://github.com/TeamDamagedSouls/TDS-Discord-Bot. Contact @AX#1999 if you'd like to help make me better!")
   }
 });
