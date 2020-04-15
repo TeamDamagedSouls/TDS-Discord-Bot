@@ -20,13 +20,16 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+    //ping pong
     if (msg.content === 'ping') {
         msg.reply('pong');
     }
+    //capitalized Ping Pong
     else if (msg.content === 'Ping') {
         msg.reply('Pong');
         console.log(`<@${botID}>`);
     }
+    //@SoulCatcher for bot information
     else if (msg.mentions.users) {
         let firstMention = msg.mentions.users.first();
         if (firstMention === client.user) {
