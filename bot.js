@@ -39,3 +39,8 @@ client.on('message', msg => {
 });
 
 client.login(auth.token);
+
+/* ToDo:
+- Ping pong cooldown
+- response when someone says pong ("I don't understand, may I suggest: "ping"")
+*/
