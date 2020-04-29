@@ -2,4 +2,4 @@
 node_modules
 
 #ignore discord bot authentication key
-settings.json
+/data/settings.json
