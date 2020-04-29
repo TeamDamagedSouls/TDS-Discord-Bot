@@ -1,22 +1,14 @@
 {
-  "name": "tds-discord-bot",
-  "version": "1.0.0",
-  "description": "Discord Bot for Team Damaged Souls Use",
+  "name": "discord-bot-maker-bot",
+  "author": "Robert Borghese",
   "main": "bot.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TeamDamagedSouls/TDS-Discord-Bot.git"
-  },
-  "author": "Alexander Arcasoy",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TeamDamagedSouls/TDS-Discord-Bot/issues"
-  },
-  "homepage": "https://github.com/TeamDamagedSouls/TDS-Discord-Bot#readme",
+  "version": "1.5.10",
   "dependencies": {
-    "discord.js": "^12.1.1"
+    "discord.js": "^11.5.1",
+    "fstorm": "latest",
+    "jimp": "latest",
+    "request": "^2.88.2",
+    "valid-url": "^1.0.9",
+    "ytdl-core": "^2.1.0"
   }
 }
